@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+
+		/*anh va navigation bar*/
+		img{
+			max-width: 100%;
+			height: auto;
+		}
+
+		.header{
+			display:  flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+
+		.header_left img{
+			width: 150px;
+			height: 100px;
+			display: block;
+		}
+
+		.header_nav{
+			list-style-type: none;
+			padding: 0;
+			display: flex;
+		}
+
+		a{
+			font-size: 20px;
+			text-decoration: none;
+			color: black;
+			font-weight: bold;
+		}
+
+		.header_nav li{
+			margin-left: 25px;
+			color: black;
+			width: 150px;
+		}
+
+		.header_nav_home{
+			border-bottom: 1px solid black;
+		}
+
+		.header_nav_job{
+			border-bottom: 1px solid red;
+		}
+
+		.header_nav_job a{
+			color: red;
+		}
+
+		.header_nav_contact{
+			border-bottom: 1px solid black;
+		}
+
+
+		/*general inquiries*/
+		.general{
+			font-size: 40px;
+			font-weight: bold;
+			background-color: black;
+			color: white;
+			text-align: center;
+		}
+
+		/*Form*/
+		/*NAME - EMAIL - NATURE OF ENQUIRY - MESSAGE - required*/
+		.name_required{
+			display: flex;
+			justify-content: space-between;
+		}
+
+		.email_required{
+			display: flex;
+			justify-content: space-between;
+		}
+
+		.nature_required{
+			display: flex;
+			justify-content: space-between;
+		}
+
+		.message_required{
+			display: flex;
+			justify-content: space-between;
+		}
+
+		.topic_first{
+			font-size: 16px;
+			font-weight: bold;
+			margin-bottom: 2px;
+			margin-top: 0px;
+		}
+
+		.required_first{
+			font-size: 16px;
+			font-weight: bold;
+			color: red;
+			margin-bottom: 2px;
+			margin-top: 0px;
+		}
+
+		.topic{
+			font-size: 16px;
+			font-weight: bold;
+			margin-bottom: 2px;
+		}
+
+		.required{
+			font-size: 16px;
+			font-weight: bold;
+			color: red;
+			margin-bottom: 2px;
+		}
+
+		.input{
+			width: 100%;
+			height: 16px;
+		}
+
+		.select{
+			width: 100%;
+			height: 20px;
+			border-radius: 5px;
+			font-weight: bold;
+		}
+
+		.textarea{
+			width: 99.7%;
+			height: 80px;
+		}	
+
+		.required_last{
+			display: flex;
+			font-size: 16px;
+			font-weight: bold;
+			color: red;
+			margin-bottom: 2px;
+			margin-top: 0px;
+			justify-content: flex-end;
+		}
+
+		.submit{
+			width: 100%;
+			height: 40px;
+			font-family: arial;
+			font-size: 13px;
+			font-weight: bold;
+			background-color: black;
+			color: white;
+			border: none;
+			margin-top: 20px;
+			cursor: pointer;
+		}
+
+		/*Status*/
+		.user_online{
+			display: flex;
+			justify-content: center;
+			font-size: 16px;
+			font-weight: bold;
+			margin-bottom: 2px;
+
+		}
+
+	</style>
+</head>
+<body>
+	<header class="header">
+		<div class="header_left">
+			<img src="logo.jpg">
+		</div>
+		<div class="header_right">
+			<ul class="header_nav">
+				<li class="header_nav_home"><a href="#">HOME</a></li>
+				<li class="header_nav_job"><a href="#">JOBS</a></li>
+				<li class="header_nav_contact"><a href="#">CONTACT</a></li>
+			</ul>
+		</div>
+	</header>
+	<h2 class="general">GENERAL INQUIRIES</h2>
+	<form>
+		<div class="name_required">
+			<p class="topic_first">NAME</p>
+			<p class="required_first">required</p>	
+		</div>
+		<input class="input">
+
+		<div class="email_required">
+			<p class="topic">EMAIL</p>
+			<p class="required">required</p>	
+		</div>
+		<input class="input">
+
+		<div class="nature_required">
+			<p class="topic">NATURE OF ENQUIRY</p>
+		</div>
+		<select class="select">
+			<option>general</option>
+		</select>
+
+		<div class="message_required">
+			<p class="topic">MESSAGE</p>	
+		</div>
+		<textarea class="textarea"></textarea>
+
+		<div>
+			<p class="topic">3 + 4 = ?</p>
+			<p class="required_last">required</p>
+			<input class="input">
+		</div>
+		<button class="submit" type="submit">SUBMIT</button>
+	</form>
+	<div>
+		<p class="user_online">200 Online Users - 24 Visited Users</p>
+	</div>
+</body>
+</html>
