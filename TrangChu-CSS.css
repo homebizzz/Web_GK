@@ -24,10 +24,25 @@ body{
     font-size: 14px;
 }
 
+.wrapper_container{
+    width: 960px;
+    margin: 0px auto;
+}
+
 #logo, #main-menu{
     float: left;
 }
 
 #search {
     float: right;
+}
+
+#main-menu>li{
+    float: left;
+    border-right: 1px solid #e8e8e8;
+}
+
+#main-menu li a{
+    display: block;
+    padding: 20px;
 }
