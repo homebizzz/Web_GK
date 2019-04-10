@@ -1,0 +1,33 @@
+*{margin: 0px; padding: 0px;}
+
+a {text-decoration: none; color: #888;}
+ul li {
+    list-style: none;
+}
+
+.clearfix::after{
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+
+.clearfix{
+    clear: both;
+    display: block;
+}
+
+body{
+    font-family: Arial;
+    font-size: 14px;
+}
+
+#logo, #main-menu{
+    float: left;
+}
+
+#search {
+    float: right;
+}
