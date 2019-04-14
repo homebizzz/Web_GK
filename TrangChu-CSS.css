@@ -19,13 +19,18 @@ ul li {
     display: block;
 }
 
+#head{
+    height: 70px;
+    background-color: #111111;
+}
+
 body{
     font-family: Arial;
     font-size: 14px;
 }
 
 .wrapper_container{
-    width: 960px;
+    width: 80%;
     margin: 0px auto;
 }
 
@@ -34,13 +39,25 @@ body{
 }
 
 #search {
+    float: left;
+}
+
+#login {
     float: right;
+    margin-right: 60px;
 }
 
 #main-menu>li{
     float: left;
     border-right: 1px solid #e8e8e8;
-    width: 150px;
+    width: 140px;
+    align-content: center;
+}
+
+#main-menu li a{
+    align-content: center;
+    color: #DDDDDD;
+    text-decoration-color: #888;
 }
 
 #main-menu>li:last-child{
@@ -73,11 +90,14 @@ body{
 }
 
 #search input{
-    width: 110px;
+    width: 200px;
     margin-top: 14px;
     padding: 5px;
+    margin-right: 0px;
     outline: none;
-    background: url(./imgs/search.png) no-repeat 80px 2px;
+    background: url(./imgs/search.png) no-repeat 172px 2px;
     border: none;
     background-size: 28px;
+    color: #DDDDDD;
+    background-color: #888888;
 }
