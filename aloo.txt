@@ -1,0 +1,8 @@
+Phan he khach van lai
+	Truong: Trang chu
+	Tri: Danh sach - tim kiem
+	Tien: Chi tiet
+Phan he phong vien: Tien
+Phan he bien tap vien: Tri
+Phan he quan tri vien: Truong
+Chung thi tu tu lam chung
