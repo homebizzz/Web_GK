@@ -1,4 +1,4 @@
-alo alo 12345678910Phan he khach van lai
+Phan he khach van lai
 	Truong: Trang chu
 	Tri: Danh sach - tim kiem
 	Tien: Chi tiet
