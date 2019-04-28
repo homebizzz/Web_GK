@@ -902,6 +902,11 @@ section {
     margin-bottom   : 15px;
 }
 
+.img-fluid{
+    height: 186px;
+    width: 350px;
+}
+
 .category_article_wrapper .media-heading {
     margin-top      : 5px;
 }
