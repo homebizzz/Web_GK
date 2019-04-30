@@ -97,7 +97,7 @@
 										<a href="#" class="btn btn-secondary">
 		                                   <i class="fa fa-check"></i>
 		                                </a>
-		                            	<a href="#" class="btn btn-secondary">
+		                            	<a href="#" class="btn btn-secondary" data-toggle="modal" data-target="#editPostModal">
 		                                   <i class="fa fa-remove"></i>
 		                                </a>
 		                            </td>
@@ -222,14 +222,61 @@
 	</div>
 	<!--/.main-->
 
-	<script src="js/jquery-1.11.1.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/chart.min.js"></script>
-	<script src="js/chart-data.js"></script>
-	<script src="js/easypiechart.js"></script>
-	<script src="js/easypiechart-data.js"></script>
-	<script src="js/bootstrap-datepicker.js"></script>
-	<script src="js/custom.js"></script>
+	<!-- VIEW DETAIL POST -->
+    <div class="modal fade" id="editPostModal">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header bg-primary">
+                        <h5 class="modal-title text-white" id="detailPostModalLabel">Chi tiết bài viết</h5>
+                        <button class="close" data-dismiss="modal">
+                            <span>&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="title" class="form-control-label">Tiêu đề</label>
+                                <input type="text" id="title" class="form-control" value="Post One">
+                            </div>
+                            <div class="form-group">
+                                <label for="category" class="form-control-label">Chuyên mục</label>
+                                <select id="category" class="form-control">
+                                    <option value="">Web Development</option>
+                                    <option value="">Tech Gadgets</option>
+                                    <option value="">Business</option>
+                                    <option value="">Health & Wellness</option>
+                                </select>
+                            </div>
+                            <div class="form-group bg-faded p-5">
+                                <label for="file">Ảnh đính kèm</label>
+                              	<input type="file" class="form-control-file" id="file">
+                                <small id="fileHelp" class="form-text text-muted">
+                                    Max Size 3MB
+                                </small>
+                            </div>
+                            <div class="form-group">
+                                <label for="body">Bài viết</label><br>
+                                <textarea name="editor2" id="body" cols="60" rows="3">
+                                	Lorem ipsum dolor sit amet, consectetur adipisicing elit. A amet eveniet excepturi libero quas quasi! A atque cumque distinctio dolore dolorem eaque eius eligendi esse et facilis harum hic in, inventore laboriosam laborum laudantium mollitia nihil pariatur placeat praesentium quas quibusdam quisquam quo tempore totam? Culpa cumque eius ipsam official?
+                                </textarea>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+                    </div>
+                </div>
+            </div>
+    </div>
+
+	<script src="../admin/js/jquery-1.11.1.min.js"></script>
+	<script src="../admin/js/bootstrap.min.js"></script>
+	<script src="../admin/js/chart.min.js"></script>
+	<script src="../admin/js/chart-data.js"></script>
+	<script src="../admin/js/easypiechart.js"></script>
+	<script src="../admin/js/easypiechart-data.js"></script>
+	<script src="../admin/js/bootstrap-datepicker.js"></script>
+	<script src="../admin/js/custom.js"></script>
 	
 </body>
 </html>
