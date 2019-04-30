@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Teach - Quản lý bài viết</title>
+	<title>Tech - Quản lý bài viết</title>
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/font-awesome.min.css" rel="stylesheet">
 	<link href="css/datepicker3.css" rel="stylesheet">
@@ -46,8 +46,7 @@
 			</div>
 		</form>
 		<ul class="nav menu">
-			<li class="active"><a href="index.html"><em class="fa fa-dashboard">&nbsp;</em> Dashboard</a></li>
-			<li><a href="man-article.html"><em class="fa fa-pencil-square-o">&nbsp;</em> Quản lý bài viết</a></li>
+			<li class="active"><a href="man-article.html"><em class="fa fa-pencil-square-o">&nbsp;</em> Quản lý bài viết</a></li>
 			<li><a href="man-category.html"><em class="fa fa-cubes">&nbsp;</em> Quản lý chuyên mục</a></li>
 			<li><a href="man-tag.html"><em class="fa fa-tags">&nbsp;</em> Quản lý nhãn</a></li>
 			<li><a href="man-user.html"><em class="fa fa-users">&nbsp;</em> Quản lý người dùng</a></li>
@@ -73,6 +72,186 @@
 
 		<div class="row">
 			<!-- Viết tiếp nội dung ở đây -->
+			<section id="actions" class="py-4 mb-4 bg-faded">
+	            <div class="container">
+	                <div class="row">
+	                    <div class="col-md-4">
+	                        <a href="#" class="btn btn-primary btn-block" data-toggle="modal" data-target="#addPostModal">
+	                            <i class="fa fa-plus"></i> Thêm bài viết mới
+	                        </a>
+	                    </div>
+	                </div>
+	            </div>
+	        </section>
+
+	        <section id="posts">
+		        <div class="container">
+		            <div class="row">
+		                <div class="col">
+		                    <div class="card-header">
+		                        <h4>Latest Posts</h4>
+		                    </div>
+		                    <table class="table table-striped">
+		                        <thead class="thead-inverse">
+		                        <tr>
+		                            <th>#</th>
+		                            <th>Title</th>
+		                            <th>Category</th>
+		                            <th>Date Posted</th>
+		                            <th></th>
+		                        </tr>
+		                        </thead>
+		                        <tbody>
+		                        <tr>
+		                            <td scope="row">1</td>
+		                            <td>Post One</td>
+		                            <td>Web Development</td>
+		                            <td>July 22, 2017</td>
+		                            <td>
+		                            	<a href="#" class="btn btn-secondary">
+		                                   <i class="fa fa-remove"></i>
+		                                </a>
+		                                <a href="#" class="btn btn-secondary">
+		                                   <i class="fa fa-edit"></i>
+		                                </a>
+		                                <a href="details.html" class="btn btn-secondary">
+		                                    <i class="fa fa-angle-double-right"> Details</i>
+		                                </a>
+		                            </td>
+		                        </tr>
+		                        <tr>
+		                            <td scope="row">2</td>
+		                            <td>Post Two</td>
+		                            <td>Web Development</td>
+		                            <td>July 22, 2017</td>
+		                            <td>
+		                            	<a href="#" class="btn btn-secondary">
+		                                   <i class="fa fa-remove"></i>
+		                                </a>
+		                                <a href="#" class="btn btn-secondary">
+		                                   <i class="fa fa-edit"></i>
+		                                </a>	
+		                                <a href="details.html" class="btn btn-secondary">
+		                                    <i class="fa fa-angle-double-right"> Details</i>
+		                                </a>
+		                            </td>
+		                        </tr>
+		                        <tr>
+		                            <td scope="row">3</td>
+		                            <td>Post Three</td>
+		                            <td>Web Development</td>
+		                            <td>July 22, 2017</td>
+		                            <td>
+		                            	<a href="#" class="btn btn-secondary">
+		                                   <i class="fa fa-remove"></i>
+		                                </a>
+		                                <a href="#" class="btn btn-secondary">
+		                                   <i class="fa fa-edit"></i>
+		                                </a>	
+		                                <a href="details.html" class="btn btn-secondary">
+		                                    <i class="fa fa-angle-double-right"> Details</i>
+		                                </a>
+		                            </td>
+		                        </tr>
+		                        <tr>
+		                            <td scope="row">4</td>
+		                            <td>Post Four</td>
+		                            <td>Web Development</td>
+		                            <td>July 22, 2017</td>
+		                            <td>
+		                            	<a href="#" class="btn btn-secondary">
+		                                   <i class="fa fa-remove"></i>
+		                                </a>
+		                                <a href="#" class="btn btn-secondary">
+		                                   <i class="fa fa-edit"></i>
+		                                </a>	
+		                                <a href="details.html" class="btn btn-secondary">
+		                                    <i class="fa fa-angle-double-right"> Details</i>
+		                                </a>
+		                            </td>
+		                        </tr>
+		                        <tr>
+		                            <td scope="row">5</td>
+		                            <td>Post Five</td>
+		                            <td>Web Development</td>
+		                            <td>July 22, 2017</td>
+		                            <td>
+		                            	<a href="#" class="btn btn-secondary">
+		                                   <i class="fa fa-remove"></i>
+		                                </a>
+		                                <a href="#" class="btn btn-secondary">
+		                                   <i class="fa fa-edit"></i>
+		                                </a>	
+		                                <a href="details.html" class="btn btn-secondary">
+		                                    <i class="fa fa-angle-double-right"> Details</i>
+		                                </a>
+		                            </td>
+		                        </tr>
+		                        <tr>
+		                            <td scope="row">6</td>
+		                            <td>Post Six</td>
+		                            <td>Web Development</td>
+		                            <td>July 22, 2017</td>
+		                            <td>
+		                            	<a href="#" class="btn btn-secondary">
+		                                   <i class="fa fa-remove"></i>
+		                                </a>
+		                                <a href="#" class="btn btn-secondary">
+		                                   <i class="fa fa-edit"></i>
+		                                </a>	
+		                                <a href="details.html" class="btn btn-secondary">
+		                                    <i class="fa fa-angle-double-right"> Details</i>
+		                                </a>
+		                            </td>
+		                        </tr>
+		                        <tr>
+		                            <td scope="row">7</td>
+		                            <td>Post Seven</td>
+		                            <td>Web Development</td>
+		                            <td>July 22, 2017</td>
+		                            <td>
+		                            	<a href="#" class="btn btn-secondary">
+		                                   <i class="fa fa-remove"></i>
+		                                </a>
+		                                <a href="#" class="btn btn-secondary">
+		                                   <i class="fa fa-edit"></i>
+		                                </a>	
+		                                <a href="details.html" class="btn btn-secondary">
+		                                    <i class="fa fa-angle-double-right"> Details</i>
+		                                </a>
+		                            </td>
+		                        </tr>
+
+		                        </tbody>
+		                    </table>
+
+		                    <nav class="ml-4">
+		                        <ul class="pagination">
+		                            <li class="page-item disabled">
+		                                <a href="#" class="page-link">Previous</a>
+		                            </li>
+		                            <li class="page-item active">
+		                                <a href="#" class="page-link">1</a>
+		                            </li>
+		                            <li class="page-item">
+		                                <a href="#" class="page-link">2</a>
+		                            </li>
+		                            <li class="page-item">
+		                                <a href="#" class="page-link">3</a>
+		                            </li>
+		                            <li class="page-item">
+		                                <a href="#" class="page-link">...</a>
+		                            </li>
+		                            <li class="page-item">
+		                                <a href="#" class="page-link">Next</a>
+		                            </li>
+		                        </ul>
+		                    </nav>
+
+		                </div>
+		            </div>
+		        </div>
+		    </section>
 		</div>
 
 	</div>
