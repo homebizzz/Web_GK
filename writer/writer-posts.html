@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Tech - Quản lý bài viết</title>
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/font-awesome.min.css" rel="stylesheet">
+	<link href="css/datepicker3.css" rel="stylesheet">
+	<link href="css/styles.css" rel="stylesheet">
+	
+	<!--Custom Font-->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+	<!--[if lt IE 9]>
+	<script src="js/html5shiv.js"></script>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+</head>
+<body>
+	<nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#sidebar-collapse"><span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span></button>
+				<a class="navbar-brand" href="#"><span>Tech</span></a>
+			</div>
+		</div><!-- /.container-fluid -->
+	</nav>
+	<div id="sidebar-collapse" class="col-sm-3 col-lg-2 sidebar">
+		<div class="profile-sidebar">
+			<div class="profile-userpic">
+				<img src="http://placehold.it/50/30a5ff/fff" class="img-responsive" alt="">
+			</div>
+			<div class="profile-usertitle">
+				<div class="profile-usertitle-name">Username</div>
+				<div class="profile-usertitle-status"><span class="indicator label-success"></span>Online</div>
+			</div>
+			<div class="clear"></div>
+		</div>
+		<div class="divider"></div>
+		<form role="search">
+			<div class="form-group">
+				<input type="text" class="form-control" placeholder="Search">
+			</div>
+		</form>
+		<ul class="nav menu">
+			<li class="active"><a href="writer-posts.html"><em class="fa fa-pencil-square-o">&nbsp;</em> Quản lý bài viết</a></li>
+			<li><a data-toggle="modal" data-target="#addPostModal"><em class="fa fa-plus">&nbsp;</em>  Thêm bài viết mới</a></li>
+			<li><a href="../signin-up.html"><em class="fa fa-power-off">&nbsp;</em> Logout</a></li>
+		</ul>
+	</div><!--/.sidebar-->
+
+	<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
+		<div class="row">
+			<ol class="breadcrumb">
+				<li><a href="#">
+					<em class="fa fa-home"></em>
+				</a></li>
+				<li class="active">Quản lý bài viết</li>
+			</ol>
+		</div><!--/.row-->
+		
+		<div class="row">
+			<div class="col-lg-12">
+				<h1 class="page-header">Đã được duyệt và chờ xuất bản</h1>
+			</div>
+		</div><!--/.row-->
+
+	        <section id="posts">
+		        <div class="container">
+		            <div class="row">
+		                <div class="col">
+		                    <div class="card-header">
+		                        <h4>&nbsp;</h4>
+		                    </div>
+		                    <table class="table table-striped">
+		                        <thead class="thead-inverse">
+		                        <tr>
+		                            <th>#</th>
+		                            <th>Tiêu đề</th>
+		                            <th>Chuyên mục</th>
+		                            <th>Ngày đăng</th>
+		                            <th></th>
+		                        </tr>
+		                        </thead>
+		                        <tbody>
+		                        <tr>
+		                            <td scope="row">1</td>
+		                            <td>Post One</td>
+		                            <td>Web Development</td>
+		                            <td>July 22, 2017</td>
+		                            <td>
+		                            	<a href="#" class="btn btn-secondary">
+		                                   <i class="fa fa-remove"></i>
+		                                </a>
+		                                <a href="#" class="btn btn-secondary">
+		                                   <i class="fa fa-edit"></i>
+		                                </a>
+		                                <a href="details.html" class="btn btn-secondary">
+		                                    <i class="fa fa-location-arrow"> Chi tiết</i>
+		                                </a>
+		                            </td>
+		                        </tr>
+		                        <tr>
+		                            <td scope="row">2</td>
+		                            <td>Post Two</td>
+		                            <td>Web Development</td>
+		                            <td>July 22, 2017</td>
+		                            <td>
+		                            	<a href="#" class="btn btn-secondary">
+		                                   <i class="fa fa-remove"></i>
+		                                </a>
+		                                <a href="#" class="btn btn-secondary">
+		                                   <i class="fa fa-edit"></i>
+		                                </a>	
+		                                <a href="details.html" class="btn btn-secondary">
+		                                    <i class="fa fa-location-arrow"> Chi tiết</i>
+		                                </a>
+		                            </td>
+		                        </tr>
+		                        <tr>
+		                            <td scope="row">3</td>
+		                            <td>Post Three</td>
+		                            <td>Web Development</td>
+		                            <td>July 22, 2017</td>
+		                            <td>
+		                            	<a href="#" class="btn btn-secondary">
+		                                   <i class="fa fa-remove"></i>
+		                                </a>
+		                                <a href="#" class="btn btn-secondary">
+		                                   <i class="fa fa-edit"></i>
+		                                </a>	
+		                                <a href="details.html" class="btn btn-secondary">
+		                                    <i class="fa fa-location-arrow"> Chi tiết</i>
+		                                </a>
+		                            </td>
+		                        </tr>
+		                        <tr>
+		                            <td scope="row">4</td>
+		                            <td>Post Four</td>
+		                            <td>Web Development</td>
+		                            <td>July 22, 2017</td>
+		                            <td>
+		                            	<a href="#" class="btn btn-secondary">
+		                                   <i class="fa fa-remove"></i>
+		                                </a>
+		                                <a href="#" class="btn btn-secondary">
+		                                   <i class="fa fa-edit"></i>
+		                                </a>	
+		                                <a href="details.html" class="btn btn-secondary">
+		                                    <i class="fa fa-location-arrow"> Chi tiết</i>
+		                                </a>
+		                            </td>
+		                        </tr>
+		                        <tr>
+		                            <td scope="row">5</td>
+		                            <td>Post Five</td>
+		                            <td>Web Development</td>
+		                            <td>July 22, 2017</td>
+		                            <td>
+		                            	<a href="#" class="btn btn-secondary">
+		                                   <i class="fa fa-remove"></i>
+		                                </a>
+		                                <a href="#" class="btn btn-secondary">
+		                                   <i class="fa fa-edit"></i>
+		                                </a>	
+		                                <a href="details.html" class="btn btn-secondary">
+		                                    <i class="fa fa-location-arrow"> Chi tiết</i>
+		                                </a>
+		                            </td>
+		                        </tr>
+		                        <tr>
+		                            <td scope="row">6</td>
+		                            <td>Post Six</td>
+		                            <td>Web Development</td>
+		                            <td>July 22, 2017</td>
+		                            <td>
+		                            	<a href="#" class="btn btn-secondary">
+		                                   <i class="fa fa-remove"></i>
+		                                </a>
+		                                <a href="#" class="btn btn-secondary">
+		                                   <i class="fa fa-edit"></i>
+		                                </a>	
+		                                <a href="details.html" class="btn btn-secondary">
+		                                    <i class="fa fa-location-arrow"> Chi tiết</i>
+		                                </a>
+		                            </td>
+		                        </tr>
+		                        <tr>
+		                            <td scope="row">7</td>
+		                            <td>Post Seven</td>
+		                            <td>Web Development</td>
+		                            <td>July 22, 2017</td>
+		                            <td>
+		                            	<a href="#" class="btn btn-secondary">
+		                                   <i class="fa fa-remove"></i>
+		                                </a>
+		                                <a href="#" class="btn btn-secondary">
+		                                   <i class="fa fa-edit"></i>
+		                                </a>	
+		                                <a href="details.html" class="btn btn-secondary">
+		                                    <i class="fa fa-location-arrow"> Chi tiết</i>
+		                                </a>
+		                            </td>
+		                        </tr>
+
+		                        </tbody>
+		                    </table>
+
+		                    <nav class="ml-4">
+		                        <ul class="pagination">
+		                            <li class="page-item disabled">
+		                                <a href="#" class="page-link">Trước</a>
+		                            </li>
+		                            <li class="page-item active">
+		                                <a href="#" class="page-link">1</a>
+		                            </li>
+		                            <li class="page-item">
+		                                <a href="#" class="page-link">2</a>
+		                            </li>
+		                            <li class="page-item">
+		                                <a href="#" class="page-link">3</a>
+		                            </li>
+		                            <li class="page-item">
+		                                <a href="#" class="page-link">...</a>
+		                            </li>
+		                            <li class="page-item">
+		                                <a href="#" class="page-link">Tiếp</a>
+		                            </li>
+		                        </ul>
+		                    </nav>
+
+
+		<div class="row">
+			<div class="col-lg-12">
+				<h1 class="page-header">Đã xuất bản</h1>
+			</div>
+		</div><!--/.row-->
+
+		<div class="row">
+	        <section id="posts">
+		        <div class="container">
+		            <div class="row">
+		                <div class="col">
+		                    <div class="card-header">
+		                        <h4>&nbsp;</h4>
+		                    </div>
+		                    <table class="table table-striped">
+		                        <thead class="thead-inverse">
+		                        <tr>
+		                            <th>#</th>
+		                            <th>Tiêu đề</th>
+		                            <th>Chuyên mục</th>
+		                            <th>Ngày đăng</th>
+		                            <th></th>
+		                        </tr>
+		                        </thead>
+		                        <tbody>
+		                        <tr>
+		                            <td scope="row">1</td>
+		                            <td>Post One</td>
+		                            <td>Web Development</td>
+		                            <td>July 22, 2017</td>
+		                            <td>
+		                            	<a href="#" class="btn btn-secondary">
+		                                   <i class="fa fa-remove"></i>
+		                                </a>
+		                                <a href="#" class="btn btn-secondary">
+		                                   <i class="fa fa-edit"></i>
+		                                </a>
+		                                <a href="details.html" class="btn btn-secondary">
+		                                    <i class="fa fa-location-arrow"> Chi tiết</i>
+		                                </a>
+		                            </td>
+		                        </tr>
+		                        <tr>
+		                            <td scope="row">2</td>
+		                            <td>Post Two</td>
+		                            <td>Web Development</td>
+		                            <td>July 22, 2017</td>
+		                            <td>
+		                            	<a href="#" class="btn btn-secondary">
+		                                   <i class="fa fa-remove"></i>
+		                                </a>
+		                                <a href="#" class="btn btn-secondary">
+		                                   <i class="fa fa-edit"></i>
+		                                </a>	
+		                                <a href="details.html" class="btn btn-secondary">
+		                                    <i class="fa fa-location-arrow"> Chi tiết</i>
+		                                </a>
+		                            </td>
+		                        </tr>
+		                        <tr>
+		                            <td scope="row">3</td>
+		                            <td>Post Three</td>
+		                            <td>Web Development</td>
+		                            <td>July 22, 2017</td>
+		                            <td>
+		                            	<a href="#" class="btn btn-secondary">
+		                                   <i class="fa fa-remove"></i>
+		                                </a>
+		                                <a href="#" class="btn btn-secondary">
+		                                   <i class="fa fa-edit"></i>
+		                                </a>	
+		                                <a href="details.html" class="btn btn-secondary">
+		                                    <i class="fa fa-location-arrow"> Chi tiết</i>
+		                                </a>
+		                            </td>
+		                        </tr>
+		                        <tr>
+		                            <td scope="row">4</td>
+		                            <td>Post Four</td>
+		                            <td>Web Development</td>
+		                            <td>July 22, 2017</td>
+		                            <td>
+		                            	<a href="#" class="btn btn-secondary">
+		                                   <i class="fa fa-remove"></i>
+		                                </a>
+		                                <a href="#" class="btn btn-secondary">
+		                                   <i class="fa fa-edit"></i>
+		                                </a>	
+		                                <a href="details.html" class="btn btn-secondary">
+		                                    <i class="fa fa-location-arrow"> Chi tiết</i>
+		                                </a>
+		                            </td>
+		                        </tr>
+		                        <tr>
+		                            <td scope="row">5</td>
+		                            <td>Post Five</td>
+		                            <td>Web Development</td>
+		                            <td>July 22, 2017</td>
+		                            <td>
+		                            	<a href="#" class="btn btn-secondary">
+		                                   <i class="fa fa-remove"></i>
+		                                </a>
+		                                <a href="#" class="btn btn-secondary">
+		                                   <i class="fa fa-edit"></i>
+		                                </a>	
+		                                <a href="details.html" class="btn btn-secondary">
+		                                    <i class="fa fa-location-arrow"> Chi tiết</i>
+		                                </a>
+		                            </td>
+		                        </tr>
+		                        <tr>
+		                            <td scope="row">6</td>
+		                            <td>Post Six</td>
+		                            <td>Web Development</td>
+		                            <td>July 22, 2017</td>
+		                            <td>
+		                            	<a href="#" class="btn btn-secondary">
+		                                   <i class="fa fa-remove"></i>
+		                                </a>
+		                                <a href="#" class="btn btn-secondary">
+		                                   <i class="fa fa-edit"></i>
+		                                </a>	
+		                                <a href="details.html" class="btn btn-secondary">
+		                                    <i class="fa fa-location-arrow"> Chi tiết</i>
+		                                </a>
+		                            </td>
+		                        </tr>
+		                        <tr>
+		                            <td scope="row">7</td>
+		                            <td>Post Seven</td>
+		                            <td>Web Development</td>
+		                            <td>July 22, 2017</td>
+		                            <td>
+		                            	<a href="#" class="btn btn-secondary">
+		                                   <i class="fa fa-remove"></i>
+		                                </a>
+		                                <a href="#" class="btn btn-secondary">
+		                                   <i class="fa fa-edit"></i>
+		                                </a>	
+		                                <a href="details.html" class="btn btn-secondary">
+		                                    <i class="fa fa-location-arrow"> Chi tiết</i>
+		                                </a>
+		                            </td>
+		                        </tr>
+
+		                        </tbody>
+		                    </table>
+
+		                    <nav class="ml-4">
+		                        <ul class="pagination">
+		                            <li class="page-item disabled">
+		                                <a href="#" class="page-link">Trước</a>
+		                            </li>
+		                            <li class="page-item active">
+		                                <a href="#" class="page-link">1</a>
+		                            </li>
+		                            <li class="page-item">
+		                                <a href="#" class="page-link">2</a>
+		                            </li>
+		                            <li class="page-item">
+		                                <a href="#" class="page-link">3</a>
+		                            </li>
+		                            <li class="page-item">
+		                                <a href="#" class="page-link">...</a>
+		                            </li>
+		                            <li class="page-item">
+		                                <a href="#" class="page-link">Tiếp</a>
+		                            </li>
+		                        </ul>
+		                    </nav>
+
+		                </div>
+		            </div>
+		        </div>
+		    </section>
+		</div>
+
+		<div class="row">
+			<div class="col-lg-12">
+				<h1 class="page-header">Bị từ chối</h1>
+			</div>
+		</div><!--/.row-->
+
+		<div class="row">
+	        <section id="posts">
+		        <div class="container">
+		            <div class="row">
+		                <div class="col">
+		                    <div class="card-header">
+		                        <h4>&nbsp;</h4>
+		                    </div>
+		                    <table class="table table-striped">
+		                        <thead class="thead-inverse">
+		                        <tr>
+		                            <th>#</th>
+		                            <th>Tiêu đề</th>
+		                            <th>Chuyên mục</th>
+		                            <th>Ngày đăng</th>
+		                            <th></th>
+		                        </tr>
+		                        </thead>
+		                        <tbody>
+		                        <tr>
+		                            <td scope="row">1</td>
+		                            <td>Post One</td>
+		                            <td>Web Development</td>
+		                            <td>July 22, 2017</td>
+		                            <td>
+		                            	<a href="#" class="btn btn-secondary">
+		                                   <i class="fa fa-remove"></i>
+		                                </a>
+		                                <a href="#" class="btn btn-secondary">
+		                                   <i class="fa fa-edit"></i>
+		                                </a>
+		                                <a href="details.html" class="btn btn-secondary">
+		                                    <i class="fa fa-location-arrow"> Chi tiết</i>
+		                                </a>
+		                            </td>
+		                        </tr>
+		                        <tr>
+		                            <td scope="row">2</td>
+		                            <td>Post Two</td>
+		                            <td>Web Development</td>
+		                            <td>July 22, 2017</td>
+		                            <td>
+		                            	<a href="#" class="btn btn-secondary">
+		                                   <i class="fa fa-remove"></i>
+		                                </a>
+		                                <a href="#" class="btn btn-secondary">
+		                                   <i class="fa fa-edit"></i>
+		                                </a>	
+		                                <a href="details.html" class="btn btn-secondary">
+		                                    <i class="fa fa-location-arrow"> Chi tiết</i>
+		                                </a>
+		                            </td>
+		                        </tr>
+		                        <tr>
+		                            <td scope="row">3</td>
+		                            <td>Post Three</td>
+		                            <td>Web Development</td>
+		                            <td>July 22, 2017</td>
+		                            <td>
+		                            	<a href="#" class="btn btn-secondary">
+		                                   <i class="fa fa-remove"></i>
+		                                </a>
+		                                <a href="#" class="btn btn-secondary">
+		                                   <i class="fa fa-edit"></i>
+		                                </a>	
+		                                <a href="details.html" class="btn btn-secondary">
+		                                    <i class="fa fa-location-arrow"> Chi tiết</i>
+		                                </a>
+		                            </td>
+		                        </tr>
+		                        <tr>
+		                            <td scope="row">4</td>
+		                            <td>Post Four</td>
+		                            <td>Web Development</td>
+		                            <td>July 22, 2017</td>
+		                            <td>
+		                            	<a href="#" class="btn btn-secondary">
+		                                   <i class="fa fa-remove"></i>
+		                                </a>
+		                                <a href="#" class="btn btn-secondary">
+		                                   <i class="fa fa-edit"></i>
+		                                </a>	
+		                                <a href="details.html" class="btn btn-secondary">
+		                                    <i class="fa fa-location-arrow"> Chi tiết</i>
+		                                </a>
+		                            </td>
+		                        </tr>
+		                        <tr>
+		                            <td scope="row">5</td>
+		                            <td>Post Five</td>
+		                            <td>Web Development</td>
+		                            <td>July 22, 2017</td>
+		                            <td>
+		                            	<a href="#" class="btn btn-secondary">
+		                                   <i class="fa fa-remove"></i>
+		                                </a>
+		                                <a href="#" class="btn btn-secondary">
+		                                   <i class="fa fa-edit"></i>
+		                                </a>	
+		                                <a href="details.html" class="btn btn-secondary">
+		                                    <i class="fa fa-location-arrow"> Chi tiết</i>
+		                                </a>
+		                            </td>
+		                        </tr>
+		                        <tr>
+		                            <td scope="row">6</td>
+		                            <td>Post Six</td>
+		                            <td>Web Development</td>
+		                            <td>July 22, 2017</td>
+		                            <td>
+		                            	<a href="#" class="btn btn-secondary">
+		                                   <i class="fa fa-remove"></i>
+		                                </a>
+		                                <a href="#" class="btn btn-secondary">
+		                                   <i class="fa fa-edit"></i>
+		                                </a>	
+		                                <a href="details.html" class="btn btn-secondary">
+		                                    <i class="fa fa-location-arrow"> Chi tiết</i>
+		                                </a>
+		                            </td>
+		                        </tr>
+		                        <tr>
+		                            <td scope="row">7</td>
+		                            <td>Post Seven</td>
+		                            <td>Web Development</td>
+		                            <td>July 22, 2017</td>
+		                            <td>
+		                            	<a href="#" class="btn btn-secondary">
+		                                   <i class="fa fa-remove"></i>
+		                                </a>
+		                                <a href="#" class="btn btn-secondary">
+		                                   <i class="fa fa-edit"></i>
+		                                </a>	
+		                                <a href="details.html" class="btn btn-secondary">
+		                                    <i class="fa fa-location-arrow"> Chi tiết</i>
+		                                </a>
+		                            </td>
+		                        </tr>
+
+		                        </tbody>
+		                    </table>
+
+		                    <nav class="ml-4">
+		                        <ul class="pagination">
+		                            <li class="page-item disabled">
+		                                <a href="#" class="page-link">Trước</a>
+		                            </li>
+		                            <li class="page-item active">
+		                                <a href="#" class="page-link">1</a>
+		                            </li>
+		                            <li class="page-item">
+		                                <a href="#" class="page-link">2</a>
+		                            </li>
+		                            <li class="page-item">
+		                                <a href="#" class="page-link">3</a>
+		                            </li>
+		                            <li class="page-item">
+		                                <a href="#" class="page-link">...</a>
+		                            </li>
+		                            <li class="page-item">
+		                                <a href="#" class="page-link">Tiếp</a>
+		                            </li>
+		                        </ul>
+		                    </nav>
+
+		                </div>
+		            </div>
+		        </div>
+		    </section>
+		</div>
+
+		<div class="row">
+			<div class="col-lg-12">
+				<h1 class="page-header">Chưa được duyệt</h1>
+			</div>
+		</div><!--/.row-->
+
+		<div class="row">
+	        <section id="posts">
+		        <div class="container">
+		            <div class="row">
+		                <div class="col">
+		                    <div class="card-header">
+		                        <h4>&nbsp;</h4>
+		                    </div>
+		                    <table class="table table-striped">
+		                        <thead class="thead-inverse">
+		                        <tr>
+		                            <th>#</th>
+		                            <th>Tiêu đề</th>
+		                            <th>Chuyên mục</th>
+		                            <th>Ngày đăng</th>
+		                            <th></th>
+		                        </tr>
+		                        </thead>
+		                        <tbody>
+		                        <tr>
+		                            <td scope="row">1</td>
+		                            <td>Post One</td>
+		                            <td>Web Development</td>
+		                            <td>July 22, 2017</td>
+		                            <td>
+		                            	<a href="#" class="btn btn-secondary">
+		                                   <i class="fa fa-remove"></i>
+		                                </a>
+		                                <a href="#" class="btn btn-secondary">
+		                                   <i class="fa fa-edit"></i>
+		                                </a>
+		                                <a href="details.html" class="btn btn-secondary">
+		                                    <i class="fa fa-location-arrow"> Chi tiết</i>
+		                                </a>
+		                            </td>
+		                        </tr>
+		                        <tr>
+		                            <td scope="row">2</td>
+		                            <td>Post Two</td>
+		                            <td>Web Development</td>
+		                            <td>July 22, 2017</td>
+		                            <td>
+		                            	<a href="#" class="btn btn-secondary">
+		                                   <i class="fa fa-remove"></i>
+		                                </a>
+		                                <a href="#" class="btn btn-secondary">
+		                                   <i class="fa fa-edit"></i>
+		                                </a>	
+		                                <a href="details.html" class="btn btn-secondary">
+		                                    <i class="fa fa-location-arrow"> Chi tiết</i>
+		                                </a>
+		                            </td>
+		                        </tr>
+		                        <tr>
+		                            <td scope="row">3</td>
+		                            <td>Post Three</td>
+		                            <td>Web Development</td>
+		                            <td>July 22, 2017</td>
+		                            <td>
+		                            	<a href="#" class="btn btn-secondary">
+		                                   <i class="fa fa-remove"></i>
+		                                </a>
+		                                <a href="#" class="btn btn-secondary">
+		                                   <i class="fa fa-edit"></i>
+		                                </a>	
+		                                <a href="details.html" class="btn btn-secondary">
+		                                    <i class="fa fa-location-arrow"> Chi tiết</i>
+		                                </a>
+		                            </td>
+		                        </tr>
+		                        <tr>
+		                            <td scope="row">4</td>
+		                            <td>Post Four</td>
+		                            <td>Web Development</td>
+		                            <td>July 22, 2017</td>
+		                            <td>
+		                            	<a href="#" class="btn btn-secondary">
+		                                   <i class="fa fa-remove"></i>
+		                                </a>
+		                                <a href="#" class="btn btn-secondary">
+		                                   <i class="fa fa-edit"></i>
+		                                </a>	
+		                                <a href="details.html" class="btn btn-secondary">
+		                                    <i class="fa fa-location-arrow"> Chi tiết</i>
+		                                </a>
+		                            </td>
+		                        </tr>
+		                        <tr>
+		                            <td scope="row">5</td>
+		                            <td>Post Five</td>
+		                            <td>Web Development</td>
+		                            <td>July 22, 2017</td>
+		                            <td>
+		                            	<a href="#" class="btn btn-secondary">
+		                                   <i class="fa fa-remove"></i>
+		                                </a>
+		                                <a href="#" class="btn btn-secondary">
+		                                   <i class="fa fa-edit"></i>
+		                                </a>	
+		                                <a href="details.html" class="btn btn-secondary">
+		                                    <i class="fa fa-location-arrow"> Chi tiết</i>
+		                                </a>
+		                            </td>
+		                        </tr>
+		                        <tr>
+		                            <td scope="row">6</td>
+		                            <td>Post Six</td>
+		                            <td>Web Development</td>
+		                            <td>July 22, 2017</td>
+		                            <td>
+		                            	<a href="#" class="btn btn-secondary">
+		                                   <i class="fa fa-remove"></i>
+		                                </a>
+		                                <a href="#" class="btn btn-secondary">
+		                                   <i class="fa fa-edit"></i>
+		                                </a>	
+		                                <a href="details.html" class="btn btn-secondary">
+		                                    <i class="fa fa-location-arrow"> Chi tiết</i>
+		                                </a>
+		                            </td>
+		                        </tr>
+		                        <tr>
+		                            <td scope="row">7</td>
+		                            <td>Post Seven</td>
+		                            <td>Web Development</td>
+		                            <td>July 22, 2017</td>
+		                            <td>
+		                            	<a href="#" class="btn btn-secondary">
+		                                   <i class="fa fa-remove"></i>
+		                                </a>
+		                                <a href="#" class="btn btn-secondary">
+		                                   <i class="fa fa-edit"></i>
+		                                </a>	
+		                                <a href="details.html" class="btn btn-secondary">
+		                                    <i class="fa fa-location-arrow"> Chi tiết</i>
+		                                </a>
+		                            </td>
+		                        </tr>
+
+		                        </tbody>
+		                    </table>
+
+		                    <nav class="ml-4">
+		                        <ul class="pagination">
+		                            <li class="page-item disabled">
+		                                <a href="#" class="page-link">Trước</a>
+		                            </li>
+		                            <li class="page-item active">
+		                                <a href="#" class="page-link">1</a>
+		                            </li>
+		                            <li class="page-item">
+		                                <a href="#" class="page-link">2</a>
+		                            </li>
+		                            <li class="page-item">
+		                                <a href="#" class="page-link">3</a>
+		                            </li>
+		                            <li class="page-item">
+		                                <a href="#" class="page-link">...</a>
+		                            </li>
+		                            <li class="page-item">
+		                                <a href="#" class="page-link">Tiếp</a>
+		                            </li>
+		                        </ul>
+		                    </nav>
+
+		                </div>
+		            </div>
+		        </div>
+		    </section>
+		</div>
+
+		<!-- Add Post Modal  -->
+		<div class="modal fade" id="addPostModal">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header bg-primary">
+                        <h5 class="modal-title text-white" id="addPostModalLabel">Add Post</h5>
+                        <button class="close" data-dismiss="modal">
+                            <span>&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="title" class="form-control-label">Title</label>
+                                <input type="text" id="title" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="category" class="form-control-label">Category</label>
+                                <select id="category" class="form-control">
+                                    <option value="">Web Development</option>
+                                    <option value="">Tech Gadgets</option>
+                                    <option value="">Business</option>
+                                    <option value="">Health & Wellness</option>
+                                </select>
+                            </div>
+                            <div class="form-group bg-faded p-3">
+                                <label for="file">Image Upload</label>
+                                <input type="file" id="file" class="form-control-file">
+                                <small id="fileHelp" class="form-text text-muted">
+                                    Max Size 3MB
+                                </small>
+                            </div>
+                            <div class="form-group">
+                                <label for="body">Body</label><br>
+                                <textarea name="editor1" id="body" cols="60" rows="3"></textarea>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button class="btn btn-primary" data-dismiss="modal">Add Post</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+	</div>
+	<!--/.main-->
+
+	<script src="js/jquery-1.11.1.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/chart.min.js"></script>
+	<script src="js/chart-data.js"></script>
+	<script src="js/easypiechart.js"></script>
+	<script src="js/easypiechart-data.js"></script>
+	<script src="js/bootstrap-datepicker.js"></script>
+	<script src="js/custom.js"></script>
+	
+</body>
+</html>
