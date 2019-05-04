@@ -1556,6 +1556,11 @@ section {
     color: #fff;
 }
 
+.gold {
+    background-color: #FFD700;
+    color: #fff;
+}
+
 
 /*------------------------------------------------
  pagination style
@@ -1746,3 +1751,10 @@ section {
     background-color: rgb(49, 160, 177);
     color: #fff;
 }
+
+/**/
+.profile-userpic img {
+  float: left;
+  width: 30px;
+  height: 30px;
+  border-radius: 9999px !important; }
